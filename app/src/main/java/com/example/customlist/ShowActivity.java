@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -30,6 +31,8 @@ public class ShowActivity extends AppCompatActivity {
             dataFromdbItem.add(data.getString(1));
             dataFromdbDesc.add(data.getString(2));
         }
+
+        Toast.makeText(this,Integer.toString(dataFromdbItem.size()),Toast.LENGTH_LONG).show();
 
         CustomAdapter ca = new CustomAdapter(this,dataFromdbItem,dataFromdbDesc);
         lv.setAdapter(ca);

@@ -1,6 +1,7 @@
 package com.example.customlist;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +27,7 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 0;
+        return items.size();
     }
 
     @Override
@@ -49,6 +50,7 @@ public class CustomAdapter extends BaseAdapter {
         item.setText(items.get(position));
         description.setText(descs.get(position));
 
+        Log.e("########3",items.get(position));
         return view;
     }
 }
